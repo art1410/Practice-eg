@@ -9,7 +9,8 @@ public class ElementSearch {
 		int[] a= {10,2,20,12,32};
 		int ans=linearSearch(a, 11);
 		int ans2= linearSearch2(a, 11);
-		System.out.println(ans);
+		int ans3= linearSearch2(a, 20);
+		System.out.println(ans3);
 //		look(a);
 
 	}
@@ -54,9 +55,21 @@ public class ElementSearch {
 				}
 				
 			}
-			return -1;
+			return Integer.MAX_VALUE;
 			
 		}
+	 static boolean linearSearc3(int[] arr, int target) {
+		 if(arr.length == 0) {
+			 return false;
+		 }
+		 //run for loop 
+		 for (int element : arr) {
+			 if (element == target) {
+				 return true;
+			 }
+		 }
+		 return false;
+	 }
 	 
 
 }
